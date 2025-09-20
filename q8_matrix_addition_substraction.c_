@@ -1,0 +1,40 @@
+#include<stdio.h>  // Include the standard input-output library
+
+void main() {  // Main function starts here
+    int a[2][2] = {1, 2, 3, 4}, b[2][2] = {5, 6, 7, 9}, c[2][2], d[2][2];  
+    // Declare and initialize two 2x2 matrices a and b
+    // Declare c for storing addition result and d for subtraction result
+
+    int i, j;  // Declare loop variables
+
+    for(i = 0; i < 2; i++) {  // Loop through rows
+        for(j = 0; j < 2; j++) {  // Loop through columns
+            c[i][j] = a[i][j] + b[i][j];  // Add corresponding elements of a and b
+        }
+    }
+
+    printf("addition result\n");  // Print heading for addition result
+
+    for(i = 0; i < 2; i++) {  // Loop through rows
+        for(j = 0; j < 2; j++) {  // Loop through columns
+            printf("%d\t", c[i][j]);  // Print each element of the addition result
+        }
+        printf("\n");  // Print newline after each row
+    }
+
+    for(i = 0; i < 2; i++) {  // Loop through rows
+        for(j = 0; j < 2; j++) {  // Loop through columns
+            d[i][j] = a[i][j] - b[i][j];  // Subtract corresponding elements of a and b
+        }
+    }
+
+    printf("substraction result\n");  // Print heading for subtraction result
+
+    for(i = 0; i < 2; i++) {  // Loop through rows
+        for(j = 0; j < 2; j++) {  // Loop through columns
+            printf("%d\t", d[i][j]);  // Print each element of the subtraction result
+        }
+        printf("\n");  // Print newline after each row
+    }
+}
+
